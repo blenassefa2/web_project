@@ -1,6 +1,6 @@
 body {
     margin:0%;
-    background-image: url("/images/back.png");
+    background-image: url("images/back.png");
     background-attachment: fixed;
     
 }
@@ -58,7 +58,7 @@ body {
     padding-top: 100px;
     height: 520px;
     background-color: white; 
-    background-image: url("/images/back.png"); 
+    background-image: url("images/back.png"); 
     background-attachment: fixed;
   
 }
@@ -115,7 +115,7 @@ body {
 
 
 #photo1{
-    background-image: url("/images/frendship.jpg");
+    background-image: url("images/frendship.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     top: 100px;
@@ -131,7 +131,7 @@ body {
 } */
 
 #photo2{
-    background-image: url("/images/download\ \(1\).jfif");
+    background-image: url("images/download\ \(1\).jfif");
     background-repeat: no-repeat;
     background-size: cover;
     top: 100px;
@@ -139,7 +139,7 @@ body {
     transform: rotateX(10deg) rotateY(60deg);
 }
 #photo3{
-    background-image: url("/images/restaurant.jpg");
+    background-image: url("images/restaurant.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     top: 110px;
@@ -147,7 +147,7 @@ body {
     transform: rotateX(10deg) rotateY(60deg);
 }
 #photo4{
-    background-image: url("/images/download.jfif");
+    background-image: url("images/download.jfif");
     background-repeat: no-repeat;
     background-size: cover;
     top: 130px;
@@ -156,7 +156,7 @@ body {
     transform: rotateX(10deg) rotateY(60deg);
 }
 #photo5{
-    background-image: url("/images/img\ 2.jfif");
+    background-image: url("images/img\ 2.jfif");
     background-repeat: no-repeat;
     background-size: cover;
     top: 120px;
