@@ -104,12 +104,12 @@ body {
     border-radius: 6px;
     cursor: pointer;
   
-   
+   background-color: lime;
     border: 2px solid lime;
     transition: all .3s ease
 }
 #inner:hover{
-    background-color: lime;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 .images{
     width: 40%;
