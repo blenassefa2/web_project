@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,14 +33,13 @@
             <a id="inner" href="#maintags">Pick random place</a>
             </div>
         </div>
-        <!-- <div class="images">
+        <div class="images">
             <div class="photo"id="photo4"></div>
             <div class="photo"id="photo1"></div>
             <div class="photo"id="photo2"></div>
-           
             <div class="photo"id="photo3"></div>
             <div class="photo"id="photo5"></div>
-        </div> -->
+        </div>
     </section>
 
     <section id="maintags">
@@ -113,17 +113,23 @@
         <input type="search" placeholder="search by name" style="margin-right: 5px;">
         </div>
     </section>
-    <section id="restaurantlists">
+    <?php
+    $connection = mysqli_connect('localhost','root','','places');
+    $query = 'SELECT * from `store` WHERE rating = "4" ';
+    $query_run = mysqli_query($connection,$query );
+    echo `<section id="restaurantlists">
          <div class="lists">
-            <div ><input type="submit"value="More detail" onclick="myfunction()"></div>
-            <div ><input type="submit"value="More detail" onclick="myfunction()"></div>
-            <div ><input type="submit"value="More detail" onclick="myfunction()"></div>
-            
-            <div ><input type="submit"value="More detail" onclick="myfunction()"></div>
-            <div><input type="submit"value="More detail" onclick="myfunction()"></div>
-            <div><input type="submit" value="More detail" onclick="myfunction()"></div>
-        </div>
-    </section>
+            <div >`;
+            while($row = mysqli_fetch_array($query_run)){
+                echo'<div > ';
+                echo '<img src="data:image;base64,'.base64_encode($row['image']).'" alt = "image" >';
+                echo'<input type="submit"value="More detail"onclick="myfunction()"></div>';
+            }
+    echo`</div>
+    </section>`
+    
+   ?>
+    
     <section  id="contact_us">
         <div class="t"></div>
         <h2>Contact us</h2>
