@@ -5,7 +5,8 @@ const postrequest = (data, url) =>
     document.body.appendChild(form);
     form.method = 'post';
     form.action = url;
-    form.target = '_blank';
+    // form.target="_blank";
+
     for (var name in data) {
         var input = document.createElement('input');
         input.type = 'hidden';
@@ -27,6 +28,22 @@ function more_detail(x){
     console.log(x)
     postrequest(data, 'detail.php');
 }
+function more(x){
+    data = {
+    ID : x
+    
+    }
+    console.log(x)
+    postrequest(data, 'detail.php');
+}
+function addrating(x,inr){
+    data = {
+        id :x,
+        i:inr
+    }
+    console.log(x)
+    postrequest(data, 'created.php');
+}
 
 function  sort_by_tag(){
     _location = document.getElementById("1");
@@ -41,4 +58,12 @@ function  sort_by_tag(){
 
     postrequest(data, 'index.php#maintags');
 
+}
+function search(id){
+    y = document.getElementById(id);
+    data={
+        name: y.value
+    }
+
+    postrequest(data, 'index.php#maintags')
 }
